@@ -110,7 +110,7 @@ void hgemm_mma_m16n8k16_naive(half *A, half *B, half *C, int M, int N, int K)
 
 int main(int argc, char *argv[])
 {
-    Tester tester(512, 2048, 1024, 1, 10, 100, false);
+    Tester tester(16, 8, 16, 1, 10, 100, true); 
     tester.evaluate(hgemm_mma_m16n8k16_naive, "hgemm_mma_m16n8k16_naive");
     return 0;
 }
